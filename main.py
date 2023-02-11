@@ -30,7 +30,7 @@ def main():
     if (mismatch == False):
         pass
     else:
-        print("success")
+        print("Success")
 
 if __name__ == "__main__":
     main()
