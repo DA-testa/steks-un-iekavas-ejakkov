@@ -17,22 +17,21 @@ def find_mismatch(text):
 
         if next in ")]}":
             if(len(opening_brackets_stack) == 0 or are_matching(opening_brackets_stack[-1][0], next ) == False):
-                return(i+1)
+                print(i+1)
+                return False
             else:
                 return("Success")
 
 
 
 def main():
-    input = input("Ievadiet F vai I un nospiediet enter!")
-    if input == "I":
+    ievade = input("Ievadiet F vai I un nospiediet enter!")
+    if ievade == "I":
 
         text = input()
         mismatch = find_mismatch(text)
-        if (mismatch == "Sucess"):
+        if (mismatch == "Success"):
             print("Success")
-        else:
-            print(mismatch)
         
 
 if __name__ == "__main__":
