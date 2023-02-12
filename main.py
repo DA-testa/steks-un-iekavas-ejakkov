@@ -11,25 +11,29 @@ def are_matching(left, right):
 
 def find_mismatch(text):
     opening_brackets_stack = []
-    flag = True
     for i, next in enumerate(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i+1))
 
         if next in ")]}":
             if(len(opening_brackets_stack) == 0 or are_matching(opening_brackets_stack[-1][0], next ) == False):
-                print(i+1)
-                return False
-            opening_brackets_stack.pop()
+                return(i+1)
+            else:
+                return("Success")
+
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    if (mismatch == False):
-        pass
-    else:
-        print("Success")
+    input = input("Ievadiet F vai I un nospiediet enter!")
+    if input == "I":
+
+        text = input()
+        mismatch = find_mismatch(text)
+        if (mismatch == "Sucess"):
+            print("Success")
+        else:
+            print(mismatch)
+        
 
 if __name__ == "__main__":
     main()
