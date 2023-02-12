@@ -25,13 +25,13 @@ def find_mismatch(text):
 
 
 def main():
-    ievade = input()
-    if ievade == "I":
+#     ievade = input()
+#     if ievade == "I":
 
-        text = input()
-        mismatch = find_mismatch(text)
-        if (mismatch == "Success"):
-            print("Success")
+       text = input()
+       mismatch = find_mismatch(text)
+       if (mismatch == "Success"):
+           print("Success")
         
 
 if __name__ == "__main__":
