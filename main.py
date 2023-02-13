@@ -25,10 +25,9 @@ def find_mismatch(text):
         
 
 def main():
-    ievade = input()
-    if ievade == "I":
-        text = input()
-        mismatch = find_mismatch(text)
+
+    text = input()
+    mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
     elif(len(opening_brackets_stack) != 0 ):
