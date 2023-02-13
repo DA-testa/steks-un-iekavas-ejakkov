@@ -27,10 +27,10 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    if(len(opening_brackets_stack) != 0 ):
-        print(opening_brackets_stack[-1][1])
-    elif mismatch == 0:
+    if mismatch == 0:
         pass
+    elif(len(opening_brackets_stack) != 0 ):
+        print(opening_brackets_stack[-1][1])
     else:
         print("Success")
 
