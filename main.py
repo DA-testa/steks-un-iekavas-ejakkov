@@ -1,7 +1,7 @@
 # python3
 
 from collections import namedtuple
-
+# from tkinter.filedialog import askopenfilename
 Bracket = namedtuple("Bracket", ["char", "position"])
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
@@ -19,16 +19,13 @@ def find_mismatch(text):
                 return 0
             opening_brackets_stack.pop()
 
-
-        
-
 def main():
     ievade = input()
-    if ievade == 'F':
-        path = input()
-        text = open(path, "r").readline()
-    if ievade == "I":
-        text = input()
+    text = input()
+    # if ievade == 'F':
+    #     text = askopenfilename()
+    # if ievade == "I":
+    #     text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
