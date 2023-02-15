@@ -25,7 +25,7 @@ def find_mismatch(text):
         
 
 def main():
-
+    ievade = input()
     text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
