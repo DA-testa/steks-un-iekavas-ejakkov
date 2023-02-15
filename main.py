@@ -3,6 +3,7 @@
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
+from tkinter.filedialog import askopenfilename
 
 
 def are_matching(left, right):
@@ -26,7 +27,10 @@ def find_mismatch(text):
 
 def main():
     ievade = input()
-    text = input()
+    if ievade == 'I':
+        text = input()
+    elif ievade == 'F':
+        text = askopenfilename()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
