@@ -27,10 +27,10 @@ def find_mismatch(text):
 
 def main():
     ievade = input()
-    if ievade == 'I':
-        text = input()
-    elif ievade == 'F':
+    if ievade == 'F':
         text = askopenfilename()
+    else:
+        text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
