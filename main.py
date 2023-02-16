@@ -23,7 +23,7 @@ def main():
     ievade = input()
 #     if ievade == 'F':
 #         text = askopenfilename()
-    if ievade == "I":
+    if ievade == 'I':
         text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
