@@ -21,11 +21,10 @@ def find_mismatch(text):
 
 def main():
     ievade = input()
-    text = input()
-    # if ievade == 'F':
-    #     text = askopenfilename()
-    # if ievade == "I":
-    #     text = input()
+    if ievade == 'F':
+        text = askopenfilename()
+    if ievade == "I":
+        text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
