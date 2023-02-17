@@ -21,9 +21,9 @@ def find_mismatch(text):
     return opening_brackets_stack
 def main():
     ievade = input()
-    # if ievade == 'F':
-    #     text = askopenfilename()
-    text = input()
+    print(ievade)
+    if ievade == 'I':
+        text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
