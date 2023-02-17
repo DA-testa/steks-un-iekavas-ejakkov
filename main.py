@@ -9,7 +9,7 @@ def are_matching(left, right):
 opening_brackets_stack = []
 
 def find_mismatch(text):
-    global opening_brackets_stack
+    opening_brackets_stack
     for  i, next in enumerate(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i+1))
@@ -18,18 +18,18 @@ def find_mismatch(text):
                 print(i+1)
                 return 0
             opening_brackets_stack.pop()
-
+    return opening_brackets_stack
 def main():
     ievade = input()
-#     if ievade == 'F':
-#         text = askopenfilename()
-    if ievade == 'I':
+    # if ievade == 'F':
+    #     text = askopenfilename()
+    if ievade == "I":
         text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
         pass
-    elif(len(opening_brackets_stack) != 0 ):
-        print(opening_brackets_stack[-1][1])
+    elif(len(mismatch) != 0 ):
+        print(mismatch[-1][1])
     else:
         print("Success")
 
