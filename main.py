@@ -1,4 +1,4 @@
-# python3
+#python 3
 
 from collections import namedtuple
 # from tkinter.filedialog import askopenfilename
@@ -21,7 +21,6 @@ def find_mismatch(text):
     return opening_brackets_stack
 def main():
     ievade = input()
-    print(ievade)
     if ievade == 'I':
         text = input()
     mismatch = find_mismatch(text)
