@@ -19,7 +19,7 @@ def find_mismatch(text):
     return opening_brackets_stack
 def main():
     ievade = input()
-    if ievade == 'I':
+    if 'I' in ievade:
         text = input()
     mismatch = find_mismatch(text)
     if mismatch == 0:
