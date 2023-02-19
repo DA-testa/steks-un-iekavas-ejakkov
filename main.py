@@ -1,31 +1,38 @@
-# python3
-
 from collections import namedtuple
-
 Bracket = namedtuple("Bracket", ["char", "position"])
-
-
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
 
-
 def find_mismatch(text):
     opening_brackets_stack = []
-    for i, next in enumerate(text):
+    for  i, next in enumerate(text):
+
         if next in "([{":
-            # Process opening bracket, write your code here
-            pass
-
+            opening_brackets_stack.append(Bracket(next, i+1))
+    
         if next in ")]}":
-            # Process closing bracket, write your code here
-            pass
+            if(len(opening_brackets_stack) == 0 or are_matching(opening_brackets_stack[-1][0], next) == False):
+                print(i+1)
+                return 0
+            opening_brackets_stack.pop()
 
-
+    return opening_brackets_stack
+    
 def main():
-    text = input()
+    ievade = input()
+    if 'I' in ievade:
+        text = input()
+    elif 'F' in ievade:
+        print("Ievadiet ceļu līdz teksta failam: ")
+        ievade = input()
+        text = open(ievade, "r").readline()
     mismatch = find_mismatch(text)
-    # Printing answer, write your code here
-
+    if mismatch == 0:
+        pass
+    elif(len(mismatch) != 0 ):
+        print(mismatch[-1][1])
+    else:
+        print("Success")
 
 if __name__ == "__main__":
     main()
